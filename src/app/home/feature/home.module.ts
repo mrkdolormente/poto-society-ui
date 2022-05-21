@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
-import { ShHeaderModule } from 'src/app/shared/ui/sh-header/sh-header.module';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -18,7 +17,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
     HomeRoutingModule,
-    ShHeaderModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,

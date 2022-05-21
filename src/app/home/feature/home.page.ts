@@ -20,7 +20,7 @@ export class HomePage implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.router.navigate(['/usr/feed']);
+      this.router.navigate(['/usr']);
     }
   }
 
