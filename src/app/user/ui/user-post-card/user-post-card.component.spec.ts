@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShSidenavComponent } from './sh-sidenav.component';
+import { UserPostCardComponent } from './user-post-card.component';
 
-describe('ShSidenavComponent', () => {
-  let component: ShSidenavComponent;
-  let fixture: ComponentFixture<ShSidenavComponent>;
+describe('UserPostCardComponent', () => {
+  let component: UserPostCardComponent;
+  let fixture: ComponentFixture<UserPostCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShSidenavComponent ]
+      declarations: [ UserPostCardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShSidenavComponent);
+    fixture = TestBed.createComponent(UserPostCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

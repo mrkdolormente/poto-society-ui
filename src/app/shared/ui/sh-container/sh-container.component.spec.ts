@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserNavComponent } from './user-nav.component';
+import { ShContainerComponent } from './sh-container.component';
 
-describe('UserNavComponent', () => {
-  let component: UserNavComponent;
-  let fixture: ComponentFixture<UserNavComponent>;
+describe('ShContainerComponent', () => {
+  let component: ShContainerComponent;
+  let fixture: ComponentFixture<ShContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserNavComponent ]
+      declarations: [ ShContainerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserNavComponent);
+    fixture = TestBed.createComponent(ShContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

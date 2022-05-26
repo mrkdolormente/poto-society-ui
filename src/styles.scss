@@ -15,8 +15,8 @@ $my-custom-typography: mat.define-typography-config(
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$poto-society-primary: mat.define-palette(mat.$indigo-palette, 900);
-$poto-society-accent: mat.define-palette(mat.$red-palette, 900);
+$poto-society-primary: mat.define-palette(mat.$blue-gray-palette, 800);
+$poto-society-accent: mat.define-palette(mat.$orange-palette, 500);
 
 // The warn palette is optional (defaults to red).
 $poto-society-warn: mat.define-palette(mat.$red-palette);
