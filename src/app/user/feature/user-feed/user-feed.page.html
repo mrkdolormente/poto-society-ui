@@ -1,0 +1,7 @@
+<app-sh-header></app-sh-header>
+<app-sh-container customClass="ps-max-w-2xl">
+  <app-user-post-card
+    *ngFor="let postDetails of postData"
+    [postDetails]="postDetails"
+  ></app-user-post-card>
+</app-sh-container>

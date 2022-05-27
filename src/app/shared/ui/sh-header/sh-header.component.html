@@ -1,22 +1,42 @@
 <header>
   <mat-toolbar color="primary">
-    <button mat-icon-button aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+    <button mat-button class="icon-button with blur_linear icon">
+      <mat-icon>blur_linear</mat-icon> PotO Society
     </button>
-    <span>PotO Society</span>
-    <span class="item-spacer"></span>
+
+    <span class="ps-flex-auto"></span>
+
+    <!-- Notification -->
     <button
       mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
+      [matMenuTriggerFor]="notifications"
+      aria-label="icon-button with notification_none icon"
     >
-      <mat-icon>favorite</mat-icon>
+      <mat-icon matBadge="7" matBadgeColor="accent" matBadgeSize="small">
+        notifications_none
+      </mat-icon>
     </button>
-    <button mat-icon-button aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
+
+    <mat-menu #notifications="matMenu">
+      <ng-template matMenuContent>
+        <mat-list role="list">
+          <mat-list-item role="listitem">Item 1 fhakd fhasf kjsdajf askdjfl </mat-list-item>
+          <mat-list-item role="listitem">Item 2</mat-list-item>
+          <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+      </ng-template>
+    </mat-menu>
+
+    <!-- Chat -->
+    <button mat-icon-button aria-label="icon-button with chat_bubble_outline icon">
+      <mat-icon matBadge="7" matBadgeColor="accent" matBadgeSize="small">
+        chat_bubble_outline
+      </mat-icon>
+    </button>
+
+    <!-- Profile Menu -->
+    <button mat-icon-button aria-label="icon-button with account_circle icon">
+      <mat-icon>account_circle</mat-icon>
     </button>
   </mat-toolbar>
-  <div class="ps-w-full ps-h-1 ps-bg-yellow-300"></div>
-  <div class="ps-w-full ps-h-1 ps-bg-white"></div>
-  <div class="ps-w-full ps-h-1 ps-bg-red-800"></div>
 </header>
