@@ -7,11 +7,25 @@
     <span class="ps-flex-auto"></span>
 
     <!-- Notification -->
-    <button mat-icon-button aria-label="icon-button with notification_none icon">
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="notifications"
+      aria-label="icon-button with notification_none icon"
+    >
       <mat-icon matBadge="7" matBadgeColor="accent" matBadgeSize="small">
         notifications_none
       </mat-icon>
     </button>
+
+    <mat-menu #notifications="matMenu">
+      <ng-template matMenuContent>
+        <mat-list role="list">
+          <mat-list-item role="listitem">Item 1 fhakd fhasf kjsdajf askdjfl </mat-list-item>
+          <mat-list-item role="listitem">Item 2</mat-list-item>
+          <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+      </ng-template>
+    </mat-menu>
 
     <!-- Chat -->
     <button mat-icon-button aria-label="icon-button with chat_bubble_outline icon">

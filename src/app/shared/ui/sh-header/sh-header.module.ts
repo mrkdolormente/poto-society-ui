@@ -5,6 +5,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { ShHeaderComponent } from './sh-header.component';
@@ -17,6 +19,8 @@ import { ShHeaderComponent } from './sh-header.component';
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
+    MatMenuModule,
+    MatListModule,
     MatToolbarModule,
   ],
   exports: [ShHeaderComponent],

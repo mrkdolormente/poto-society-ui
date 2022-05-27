@@ -1,22 +1,58 @@
-<mat-card>
-  <mat-card-header>
-    <img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" />
-    <mat-card-title>Shiba Inu dahfha jsfh</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
+<mat-card class="ps-mb-3">
+  <div class="ps-flex ps-mb-4 -ps-mx-2 ps-justify-between">
+    <div class="ps-inline-flex">
+      <img class="ps-w-10 ps-h-10 ps-rounded-full" [src]="postDetails.UserImage" />
+      <div class="ps-ml-2">
+        <p class="!ps-mb-0 ps-text-base ps-font-bold">{{ postDetails.UserName }}</p>
+        <p class="!ps-m-0 ps-text-xs ps-text-gray-500">{{ postDetails.PostDate }}</p>
+      </div>
+    </div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="postSettings"
+      aria-label="icon-button with more_vert icon"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #postSettings="matMenu">
+      <ng-template matMenuContent>
+        <button mat-menu-item>
+          <mat-icon>notifications_none</mat-icon>
+          <span>Turn on notifications for this post</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>remove_circle_outline</mat-icon>
+          <span>Hide post</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>remove_from_queue</mat-icon>
+          <span
+            >Hide all from <strong>{{ postDetails.UserName }}</strong></span
+          >
+        </button>
+        <button mat-menu-item>
+          <mat-icon>outlined_flag</mat-icon>
+          <span>Report post</span>
+        </button>
+      </ng-template>
+    </mat-menu>
+  </div>
+
+  <!-- Post Message -->
   <mat-card-content>
     <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
+      {{ postDetails.PostMessage }}
     </p>
   </mat-card-content>
-  <img
-    mat-card-image
-    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-    alt="Photo of a Shiba Inu"
-  />
-  <mat-card-actions class="!ps-flex ps-justify-between">
+
+  <!-- Post Image -->
+  <div class="ps-mb-2 -ps-mx-4">
+    <img [src]="postDetails.PostImage" alt="Photo of something" />
+  </div>
+
+  <!-- Post Actions -->
+  <mat-card-actions class="!ps-flex !ps-mb-0 ps-justify-between">
     <div class="ps-inline-block">
       <button mat-mini-fab color="primary"><mat-icon>favorite_border</mat-icon></button>
       <button mat-mini-fab color="primary" class="!ps-mx-2">
@@ -25,7 +61,10 @@
       <button mat-mini-fab color="primary"><mat-icon>repeat</mat-icon></button>
     </div>
     <div class="ps-inline-block">
-      <button mat-mini-fab color="primary"><mat-icon>archive</mat-icon></button>
+      <button mat-mini-fab color="primary"><mat-icon>bookmark_border</mat-icon></button>
     </div>
   </mat-card-actions>
+  <mat-card-footer>
+    <div class="ps-p-2">Liked by <strong>2,455,666</strong></div>
+  </mat-card-footer>
 </mat-card>
